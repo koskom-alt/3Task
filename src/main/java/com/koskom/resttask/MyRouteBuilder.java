@@ -1,6 +1,6 @@
-package RestServiseCamel;
+package com.koskom.resttask;
 
-import Utils.Utils;
+import com.koskom.utils.Utils;
 import org.apache.camel.builder.RouteBuilder;
 
 class MyRouteBuilder extends RouteBuilder {

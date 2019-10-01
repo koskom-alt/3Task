@@ -1,4 +1,4 @@
-package RestServiseCamel;
+package com.koskom.resttask;
 
 import org.apache.camel.main.Main;
 

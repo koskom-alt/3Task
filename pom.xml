@@ -52,11 +52,13 @@
       <artifactId>log4j-api</artifactId>
       <scope>runtime</scope>
     </dependency>
+
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-core</artifactId>
       <scope>runtime</scope>
     </dependency>
+
     <dependency>
       <groupId>org.apache.logging.log4j</groupId>
       <artifactId>log4j-slf4j-impl</artifactId>
@@ -94,34 +96,8 @@
         </configuration>
       </plugin>
 
-      <!-- Allows the example to be run via 'mvn compile exec:java' -->
-      <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.6.0</version>
-        <configuration>
-          <mainClass>RestServiseCamel.MainApp</mainClass>
-          <includePluginDependencies>false</includePluginDependencies>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <!-- Build an executable JAR -->
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.1.0</version>
-        <configuration>
-          <archive>
-            <manifest>
-              <addClasspath>true</addClasspath>
-              <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>RestServiseCamel.MainApp</mainClass>
-            </manifest>
-          </archive>
-        </configuration>
-      </plugin>
-
     </plugins>
+
     <resources>
       <resource>
           <directory>src/main/resources</directory>

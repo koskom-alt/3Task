@@ -1,4 +1,4 @@
-package Utils;
+package com.koskom.utils;
 
 import java.io.IOException;
 import java.io.InputStream;
