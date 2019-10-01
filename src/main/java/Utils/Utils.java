@@ -1,19 +1,20 @@
 package Utils;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.util.Properties;
 
 public class Utils {
     public static String getArtifactId(){
 
         Properties prop = new Properties();
-        try {
-            prop.load(ClassLoader.getSystemResourceAsStream("project.properties"));
-            return prop.getProperty("artifactId");
+        try (InputStream stream = ClassLoader.getSystemResourceAsStream("project.properties")){
+            prop.load(stream);
+            return prop.getProperty("artifactId", "artifactId not found");
         }
         catch (IOException ex) {
             ex.printStackTrace();
         }
-        return "OMG";
+        return "artifactId not found";
     }
 }
